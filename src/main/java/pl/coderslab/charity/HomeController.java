@@ -21,6 +21,7 @@ public class HomeController {
     @RequestMapping("/")
     public String homeAction(Model model){
         model.addAttribute("allBags", donationService.fetchAllBagsQuantity());
+        model.addAttribute("allGifts", donationService.fetchAllDonationQuantity());
         model.addAttribute("institutions", institutionService.fetchInstitutions());
         return "index";
     }

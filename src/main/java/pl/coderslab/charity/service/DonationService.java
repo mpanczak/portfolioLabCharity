@@ -17,4 +17,8 @@ public class DonationService {
     public Long fetchAllBagsQuantity() {
         return donationRepository.fetchTotalQuantity();
     }
+
+    public Long fetchAllDonationQuantity() {
+        return donationRepository.count();
+    }
 }
