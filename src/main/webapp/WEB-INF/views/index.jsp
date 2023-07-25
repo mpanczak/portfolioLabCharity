@@ -79,31 +79,56 @@
             Możesz sprawdzić czym się zajmują.</p>
 
         <ul class="help--slides-items">
-            <li>
-                <div class="col">
-                    <div class="title">Fundacja "Dbam o Zdrowie"</div>
-                    <div class="subtitle">Cel i misja: Pomoc dzieciom z ubogich rodzin.</div>
-                </div>
+            <c:forEach var="i" begin="1" end="${institutions.size() -1}" step="2">
+<%--                <c:if test="${i % 2 == 0}">--%>
+<%--                    <li style="float: left">--%>
+<%--                        <div class="col">--%>
+<%--                            <div class="title">Fundacja "${institutions[i].name}"</div>--%>
+<%--                            <div class="subtitle">Cel i misja: ${institutions[i].description}</div>--%>
+<%--                        </div>--%>
+<%--                    </li>--%>
 
-                <div class="col">
-                    <div class="title">Fundacja "A kogo"</div>
-                    <div class="subtitle">Cel i misja: Pomoc wybudzaniu dzieci ze śpiączki.</div>
-                </div>
-            </li>
-
-            <li>
-                <div class="col">
-                    <div class="title">Fundacja “Dla dzieci"</div>
-                    <div class="subtitle">Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</div>
-                </div>
-                <div class="col">
-                    <div class="title">Fundacja “Bez domu”</div>
-                    <div class="subtitle">Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania</div>
-                </div>
-
-            </li>
-
+<%--                </c:if>--%>
+<%--                <c:if test="${i % 2 == 1}">--%>
+                    <li>
+                        <div class="col">
+                            <div class="title">Fundacja "${institutions[i-1].name}"</div>
+                            <div class="subtitle">Cel i misja: ${institutions[i-1].description}</div>
+                        </div>
+                        <div class="col">
+                            <div class="title">Fundacja "${institutions[i].name}"</div>
+                            <div class="subtitle">Cel i misja: ${institutions[i].description}</div>
+                        </div>
+                    </li>
+<%--                </c:if>--%>
+            </c:forEach>
         </ul>
+<%--        <ul class="help--slides-items">--%>
+<%--            <li>--%>
+<%--                <div class="col">--%>
+<%--                    <div class="title">Fundacja "Dbam o Zdrowie"</div>--%>
+<%--                    <div class="subtitle">Cel i misja: Pomoc dzieciom z ubogich rodzin.</div>--%>
+<%--                </div>--%>
+
+<%--                <div class="col">--%>
+<%--                    <div class="title">Fundacja "A kogo"</div>--%>
+<%--                    <div class="subtitle">Cel i misja: Pomoc wybudzaniu dzieci ze śpiączki.</div>--%>
+<%--                </div>--%>
+<%--            </li>--%>
+
+<%--            <li>--%>
+<%--                <div class="col">--%>
+<%--                    <div class="title">Fundacja “Dla dzieci"</div>--%>
+<%--                    <div class="subtitle">Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</div>--%>
+<%--                </div>--%>
+<%--                <div class="col">--%>
+<%--                    <div class="title">Fundacja “Bez domu”</div>--%>
+<%--                    <div class="subtitle">Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania</div>--%>
+<%--                </div>--%>
+
+<%--            </li>--%>
+
+<%--        </ul>--%>
     </div>
 
 </section>
