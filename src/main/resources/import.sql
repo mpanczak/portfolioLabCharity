@@ -8,7 +8,7 @@ INSERT INTO institutions (id, name, description) VALUES (3, 'Dla dzieci', 'Pomoc
 INSERT INTO institutions (id, name, description) VALUES (4, 'Bez domu', 'Pomoc dla osób nie posiadających miejsca zamieszkania');
 
 
-INSERT INTO donations (id, city, pick_up_comment, pick_up_date, pick_up_time, quantity, street, zip_code) VALUES (1, 'Warszawa', 'Zdrówka', CURRENT_DATE, CURRENT_TIME, 2, 'Długa 13', '01-950');
-INSERT INTO donations (id, city, pick_up_comment, pick_up_date, pick_up_time, quantity, street, zip_code, institution_id) VALUES ();
+INSERT INTO donations (id, city, pick_up_comment, pick_up_date, pick_up_time, quantity, street, zip_code, institution_id) VALUES (1, 'Warszawa', 'Zdrówka', CURRENT_DATE, CURRENT_TIME, 2, 'Długa 13', '01-950', 1);
+INSERT INTO donations (id, city, pick_up_comment, pick_up_date, pick_up_time, quantity, street, zip_code, institution_id) VALUES (2, 'Wrocław', 'Comment', CURRENT_DATE, CURRENT_TIME, 5, '', '38-484', 2);
 
 INSERT INTO donations_categories (donation_id, categories_id) VALUES (1, 1)
