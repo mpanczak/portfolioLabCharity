@@ -1,5 +1,4 @@
-INSERT INTO categories (id, name) VALUES (1, 'ubrania');
-INSERT INTO categories (id, name) VALUES (2, 'zabawki');
+INSERT INTO categories (id, name) VALUES (1, 'ubrania, które nadają się do ponownego użycia'), (2, 'ubrania, do wyrzucenia'), (3, 'zabawki'), (4, 'książki'), (5, 'inne');
 
 
 INSERT INTO institutions (id, name, description) VALUES (1, 'Dbam o Zdrowie', 'Pomoc dzieciom z ubogich rodzin.');

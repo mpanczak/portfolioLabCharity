@@ -8,19 +8,6 @@
 
 <body>
 
-<%--<form:form method="post" modelAttribute="donation">--%>
-<%--    <form:checkboxes path="categories"--%>
-<%--                     items="${categories}"/>--%>
-<%--    <form:select path="institution" items="${institutions}"/>--%>
-<%--    <form:input path="zipCode" />--%>
-<%--    <form:input path="street" />--%>
-<%--    <form:input path="city"/>--%>
-<%--    <form:input path="quantity"/>--%>
-<%--    <form:textarea path="pickUpComment"/>--%>
-<%--    <form:input type="date" path="pickUpDate"/>--%>
-<%--    <form:input type="time" path="pickUpTime" />--%>
-<%--    <form:button value="submit">Save</form:button>--%>
-<%--</form:form>--%>
 <header class="header--form-page">
     <nav class="container container--70">
         <ul class="nav--actions">
@@ -99,55 +86,15 @@
             <div data-step="1" class="active">
                 <h3>Zaznacz co chcesz oddać:</h3>
 
-                <div class="form-group form-group--checkbox">
-                    <label>
-                        <input
-                                type="checkbox"
-                                name="categories"
-                                value="clothes-to-use"
-                        />
-                        <span class="checkbox"></span>
-                        <span class="description"
-                        >ubrania, które nadają się do ponownego użycia</span
-                        >
-                    </label>
-                </div>
-
-                <div class="form-group form-group--checkbox">
-                    <label>
-                        <input
-                                type="checkbox"
-                                name="categories"
-                                value="clothes-useless"
-                        />
-                        <span class="checkbox"></span>
-                        <span class="description">ubrania, do wyrzucenia</span>
-                    </label>
-                </div>
-
-                <div class="form-group form-group--checkbox">
-                    <label>
-                        <input type="checkbox" name="categories" value="toys" />
-                        <span class="checkbox"></span>
-                        <span class="description">zabawki</span>
-                    </label>
-                </div>
-
-                <div class="form-group form-group--checkbox">
-                    <label>
-                        <input type="checkbox" name="categories" value="books" />
-                        <span class="checkbox"></span>
-                        <span class="description">książki</span>
-                    </label>
-                </div>
-
-                <div class="form-group form-group--checkbox">
-                    <label>
-                        <input type="checkbox" name="categories" value="other" />
-                        <span class="checkbox"></span>
-                        <span class="description">inne</span>
-                    </label>
-                </div>
+                <c:forEach var="category" items="${categories}">
+                    <div class="form-group form-group--checkbox">
+                        <label>
+                            <input type="checkbox" name="categories" value="${category.id}" />
+                            <span class="checkbox"></span>
+                            <span class="description">${category.name}</span>
+                        </label>
+                    </div>
+                </c:forEach>
 
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn next-step">Dalej</button>
