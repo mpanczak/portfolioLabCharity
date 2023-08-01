@@ -164,6 +164,10 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$step.parentElement.hidden = this.currentStep >= 5;
 
       // TODO: get data from inputs and show them in summary
+
+      let street = this.$form.querySelectorAll(".form-group--inline")[1].querySelector("input").value;
+      this.$form.querySelectorAll(".form-section--columns")[1].querySelectorAll("li")[0].innerText = street;
+
     }
 
   }
