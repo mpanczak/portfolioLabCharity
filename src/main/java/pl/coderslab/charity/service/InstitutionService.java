@@ -5,7 +5,6 @@ import org.springframework.transaction.annotation.Transactional;
 import pl.coderslab.charity.entity.Institution;
 import pl.coderslab.charity.repository.InstitutionRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
